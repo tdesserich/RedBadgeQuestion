@@ -1,9 +1,10 @@
 module.exports = {
   development: {
     username: 'postgres',
-    password: 'please change this so that you place your password here' ,
+    password: 'k12323' ,
     database: 'redbadgequestion',
     port: 5432,
-    dialect: 'postgres'
+    dialect: 'postgres',
+    logging: false,
   }
 }

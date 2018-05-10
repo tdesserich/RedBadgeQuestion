@@ -6,6 +6,8 @@ create a local db call redbadgequestion
 
 connect to that db
 
+npm run dev 
+
 run sequelize db:seed:all
 
 ### What you will be creating 

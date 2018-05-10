@@ -1,6 +1,8 @@
 'use strict';
 const uuid = require('uuid');
 const chance = require('chance')()
+const db = require('../models/index').sequelize;
+const Member = db.model('account_members')
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
@@ -9,7 +11,7 @@ module.exports = {
     for (let i = 1; i < 4; i++) {
       const purchaseObj = {
         id: i,
-        accountMemberUid: '317a01ff-f77e-4a45-a9db-41939dc9364f',
+        accountMemberUid: '1f2e8a55-a064-42f4-9e49-093373e0caa8',
         storeInventoryId: 1,
         createdAt: new Date(Date.now()),
         updatedAt: new Date(Date.now())
@@ -17,6 +19,7 @@ module.exports = {
       purchaseArr.push(purchaseObj);
     }
     return queryInterface.bulkInsert('member_purchases', purchaseArr, {});
+
   },
 
   down: (queryInterface, Sequelize) => {
