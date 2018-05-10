@@ -8,7 +8,13 @@ connect to that db
 
 npm run dev 
 
+run npm install -g sequelize-cli
+
 run sequelize db:seed:all
+
+*if running the prior command fails, run '.\node_modules\.bin\sequelize db:seed:all'
+
+This will use the cli that is installed already in your node_modules.
 
 ### What you will be creating 
 
