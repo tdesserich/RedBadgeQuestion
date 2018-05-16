@@ -1,4 +1,4 @@
-# Red Badge Technical Interview Question #2
+# Red Badge Technical Interview Question #1
 ---
 run npm install 
 
