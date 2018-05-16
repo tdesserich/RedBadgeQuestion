@@ -10,7 +10,9 @@ class AccountUserService {
     findAllUsers(query) {
         return this.checkUser()
         .then(
-            () => {
+            (err) => {
+                if (!err) throw new ReferenceError('User not found.')
+                console.log('test')
                 switch (Object.keys(query)[0]) {
                     case 'limit':
                         return AccountUser.findAll({ limit: query.limit })
@@ -19,20 +21,18 @@ class AccountUserService {
                 }
             }
         )
-        .catch(
-            (e) => new ReferenceError('user doesn\'t exist')
-        );
     }
 
     checkUser() {
         if (!this._userId)
-            throw new ReferenceError('No user provided')
+            return new Promise((resolve, reject) => {
+                return resolve(false)
+            })
 
-        return AccountUser.find({ where: { uid: this._userId } })
+            console.log(this._userId)
+        return AccountUser.findOne({ where: { uid: this._userId} })
             .catch(
-                (error) => {
-                    return {m: false, e: new ReferenceError('user doesn\'t exist')}
-                }
+                (error) => false
             ).then(
                 (user) => user
             )

@@ -41,8 +41,8 @@ db.Sequelize = Sequelize;
 
 // Associations
 associations(db.sequelize)
-
 // db.sequelize.model('member_purchase').sync({force:true})
+
 db.sequelize.sync();
 
 module.exports = db;
