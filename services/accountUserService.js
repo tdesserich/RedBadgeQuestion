@@ -11,7 +11,7 @@ class AccountUserService {
         return this.checkUser()
         .then(
             (err) => {
-                if (!err) throw new ReferenceError('User not found.')
+                if (err) throw new ReferenceError('User not found.')
                 console.log('test')
                 switch (Object.keys(query)[0]) {
                     case 'limit':
