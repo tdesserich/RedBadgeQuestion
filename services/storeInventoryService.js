@@ -8,8 +8,8 @@ class StoreInventoryService {
     // }
 
     findAllProducts(query) {
-        console.log(query);
-        console.log(Object.keys(query));
+        // console.log(query);
+        // console.log(Object.keys(query));
         switch (Object.keys(query)[0]) {
             case 'limit':
                 return storeInventory.findAll({ limit: query.limit })

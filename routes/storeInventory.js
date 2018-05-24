@@ -10,8 +10,8 @@ router.get('/', (req, res) => {
         err => res.status(500).json({error: err + ''})
     )
     .then(
-        users => {
-            res.status(200).json(users)
+        products => {
+            res.status(200).json(products)
         }
     )
 })
