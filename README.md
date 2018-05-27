@@ -3,8 +3,6 @@
 Goal:
 Create a new endpoint that returns all of the Products
 
-Attatch a view just like the link above to show all of the products.
-
 check for a query in the route of the url for limit, based on that number only return the amount of records given
 
 
